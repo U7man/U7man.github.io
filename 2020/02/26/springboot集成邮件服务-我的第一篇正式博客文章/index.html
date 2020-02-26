@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>springboot集成邮件服务-我的第一篇正式博客文章 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="#前言 出师未捷身先死，上一篇因为各种原因挂了没有保存，所以严格来说这一篇不是第一篇，但是无所谓了。写这篇一是刚搭建完个人博客，赶紧写点东西收尾；二是本着把技术储备下来的思想，想到什么用到什么就写什么，第一篇就交给这个邮件服务集成了。  早期发送邮件是通过Java自带的JavaMail类来发送邮件的，不过需要自己封装消息体，后来Spring推出了JavaMailSender类大大简化了发送邮件的过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/02/26/hello-world/index.html">
+<meta property="og:title" content="springboot集成邮件服务-我的第一篇正式博客文章">
+<meta property="og:url" content="http://yoursite.com/2020/02/26/springboot%E9%9B%86%E6%88%90%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%AD%A3%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="#前言 出师未捷身先死，上一篇因为各种原因挂了没有保存，所以严格来说这一篇不是第一篇，但是无所谓了。写这篇一是刚搭建完个人博客，赶紧写点东西收尾；二是本着把技术储备下来的思想，想到什么用到什么就写什么，第一篇就交给这个邮件服务集成了。  早期发送邮件是通过Java自带的JavaMail类来发送邮件的，不过需要自己封装消息体，后来Spring推出了JavaMailSender类大大简化了发送邮件的过">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-26T09:23:44.592Z">
-<meta property="article:modified_time" content="2020-02-26T09:23:44.592Z">
+<meta property="og:image" content="http://yoursite.com/.com//mail-163.png">
+<meta property="og:image" content="http://yoursite.com/.com//mail-qq.png">
+<meta property="article:published_time" content="2020-02-26T14:41:52.000Z">
+<meta property="article:modified_time" content="2020-02-26T15:32:06.075Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="springboot mail">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/.com//mail-163.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,39 +158,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-springboot集成邮件服务-我的第一篇正式博客文章" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      springboot集成邮件服务-我的第一篇正式博客文章
     </h1>
   
 
         
-        <a href="/2020/02/26/hello-world/" class="archive-article-date">
-  	<time datetime="2020-02-26T09:23:44.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-26</time>
+        <a href="/2020/02/26/springboot%E9%9B%86%E6%88%90%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%AD%A3%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2020-02-26T14:41:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>#前言</p>
+<p>出师未捷身先死，上一篇因为各种原因挂了没有保存，所以严格来说这一篇不是第一篇，但是无所谓了。写这篇一是刚搭建完个人博客，赶紧写点东西收尾；二是本着把技术储备下来的思想，想到什么用到什么就写什么，第一篇就交给这个邮件服务集成了。</p>
+<blockquote>
+<p>早期发送邮件是通过Java自带的JavaMail类来发送邮件的，不过需要自己封装消息体，后来Spring推出了JavaMailSender类大大简化了发送邮件的过程，JavaMailSender继承自MailSender，提供了更强大的邮件发送功能，可支持不同类型的邮件发送。再到现在的Spring Boot又对其进行封装从而出现了spring-boot-starter-mail，进一步优化和完善邮件发送功能。</p>
+</blockquote>
+<p>#协议与授权码</p>
+<p>目前来说使用这个springboot的邮件服务集成不需要具体了解协议，api会用，知道smtp是发pop是收就行了，但是作为储备，这边还是放一下各个协议的介绍</p>
+<h3 id="SMTP-协议"><a href="#SMTP-协议" class="headerlink" title="SMTP 协议"></a>SMTP 协议</h3><blockquote>
+<p>SMTP 的全称是“Simple Mail Transfer Protocol”，即简单邮件传输协议。它是一组用于从源地址到目的地址传输邮件的规范，通过它来控制邮件的中转方式。SMTP 协议属于 TCP/IP 协议簇，它帮助每台计算机在发送或中转信件时找到下一个目的地。SMTP 服务器就是遵循 SMTP 协议的发送邮件服务器。<br>SMTP 认证，简单地说就是要求必须在提供了账户名和密码之后才可以登录 SMTP 服务器，这就使得那些垃圾邮件的散播者无可乘之机。增加 SMTP 认证的目的是为了使用户避免受到垃圾邮件的侵扰。</p>
+</blockquote>
+<h3 id="POP3-协议"><a href="#POP3-协议" class="headerlink" title="POP3 协议"></a>POP3 协议</h3><blockquote>
+<p>POP3是Post Office Protocol 3的简称，即邮局协议的第3个版本,它规定怎样将个人计算机连接到Internet的邮件服务器和下载电子邮件的电子协议。它是因特网电子邮件的第一个离线协议标准,POP3允许用户从服务器上把邮件存储到本地主机（即自己的计算机）上,同时删除保存在邮件服务器上的邮件，而POP3服务器则是遵循POP3协议的接收邮件服务器，用来接收电子邮件的。但目前的 POP3 邮件服务器大都可以“只下载邮件，服务器端并不删除”，也就是改进的 POP3 协议。</p>
+</blockquote>
+<h2 id="SMTP-和-POP3-是最初的两个协议，随着邮件的不断发展后来又增加了两个协议："><a href="#SMTP-和-POP3-是最初的两个协议，随着邮件的不断发展后来又增加了两个协议：" class="headerlink" title="SMTP 和 POP3 是最初的两个协议，随着邮件的不断发展后来又增加了两个协议："></a>SMTP 和 POP3 是最初的两个协议，随着邮件的不断发展后来又增加了两个协议：</h2><h3 id="IMAP-协议"><a href="#IMAP-协议" class="headerlink" title="IMAP 协议"></a>IMAP 协议</h3><blockquote>
+<p>IMAP全称是Internet Mail Access Protocol，即交互式邮件存取协议，它是跟POP3类似邮件访问标准协议之一。不同的是，开启了IMAP后，您在电子邮件客户端收取的邮件仍然保留在服务器上，同时在客户端上的操作都会反馈到服务器上，如：删除邮件，标记已读等，服务器上的邮件也会做相应的动作。所以无论从浏览器登录邮箱或者客户端软件登录邮箱，看到的邮件以及状态都是一致的。</p>
+</blockquote>
+<h3 id="Mime-协议"><a href="#Mime-协议" class="headerlink" title="Mime 协议"></a>Mime 协议</h3><blockquote>
+<p>MIME的英文全称是”Multipurpose Internet Mail Extensions” 多功能Internet 邮件扩充服务，它是一种多用途网际邮件扩充协议，在1992年最早应用于电子邮件系统，但后来也应用到浏览器。MIME意为多目Internet邮件扩展，它设计的最初目的是为了在发送电子邮件时附加多媒体数据，让邮件客户程序能根据其类型进行处理。然而当它被HTTP协议支持之后，它的意义就更为显著了。它使得HTTP传输的不仅是普通的文本，而变得丰富多彩。</p>
+</blockquote>
+<p>##获取客户端授权码</p>
+<p>在使用api之前，需要获取邮箱对应的客户端授权码，不同的邮件服务器申请授权码的方式大相径庭，这里例举两种常见。</p>
+<p>###163邮箱</p>
+<p><img src="/.com//mail-163.png" alt="mail-163"></p>
+<p>###QQ邮箱</p>
+<p><img src="/.com//mail-qq.png" alt="mail-qq"></p>
+<hr>
+<p>#搭建步骤以及简单使用</p>
+<p>既然是springboot集成邮件服务，那么第一件事自然是配置maven添加mail依赖</p>
+<p>##pom.xml文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- email依赖 --&gt; </span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;spring-boot-starter-mail&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>##在springboot的配置文件中添加邮件服务相关配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">spring.mail.host&#x3D;smtp.163.com</span><br><span class="line"># 邮箱地址</span><br><span class="line">spring.mail.username&#x3D;****@qq.com</span><br><span class="line"># 邮箱授权码</span><br><span class="line">spring.mail.password&#x3D;****</span><br><span class="line">spring.mail.properties.mail.smtp.auth&#x3D;true</span><br><span class="line">spring.mail.properties.mail.smtp.starttls.enable&#x3D;true</span><br><span class="line">spring.mail.properties.mail.smtp.starttls.required&#x3D;true</span><br><span class="line">spring.mail.default-encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>##创建发送邮件的Bean</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class MailBean implements Serializable &#123;</span><br><span class="line">    private static final long serialVersionUID &#x3D; -2116367492649751914L;</span><br><span class="line">    private String recipient;&#x2F;&#x2F;邮件接收人</span><br><span class="line">    private String subject; &#x2F;&#x2F;邮件主题</span><br><span class="line">    private String content; &#x2F;&#x2F;邮件内容</span><br><span class="line">    &#x2F;&#x2F; 省略setget方法，用lombok工具也可以直接在上方加@Data省略setget方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>##文本邮件发送</p>
+<blockquote>
+<p>Spring已经帮我们内置了JavaMailSender，直接在项目中引用即可。有了JavaMailSender，那么邮件发送就是一件再简单不过的事情了。我们只需要将JavaMailSender的Bean注入到我们自己的实现类中，然后使用JavaMail API来发送Email。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">public class MailUtil &#123;</span><br><span class="line">    @Value(&quot;$&#123;spring.mail.username&#125;&quot;)</span><br><span class="line">    private String MAIL_SENDER; &#x2F;&#x2F;邮件发送者</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private JavaMailSender javaMailSender;</span><br><span class="line"> </span><br><span class="line">    private Logger logger &#x3D; LoggerFactory.getLogger(MailUtil.class);</span><br><span class="line"> </span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 发送文本邮件</span><br><span class="line">     *</span><br><span class="line">     * @param mailBean</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public  void sendSimpleMail(MailBean mailBean) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            SimpleMailMessage mailMessage&#x3D; new SimpleMailMessage();</span><br><span class="line">            mailMessage.setFrom(MAIL_SENDER);</span><br><span class="line">            mailMessage.setTo(mailBean.getRecipient());</span><br><span class="line">            mailMessage.setSubject(mailBean.getSubject());</span><br><span class="line">            mailMessage.setText(mailBean.getContent());</span><br><span class="line">            &#x2F;&#x2F;mailMessage.copyTo(copyTo);</span><br><span class="line"> </span><br><span class="line">            javaMailSender.send(mailMessage);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;邮件发送失败&quot;, e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>其中：</p>
+<p>from，即为邮件发送者，一般设置在配置文件中</p>
+<p>to，邮件接收者，此参数可以为数组，同时发送多人</p>
+<p>subject，邮件主题</p>
+<p>content，邮件的主体</p>
+<p>copyTo：抄送人</p>
+<hr>
+<p>#总结</p>
+<p>第一篇，也是有生以来第一次写博客，内容来说也就这些，作为备忘来说勉强足够。<br>现在也是作为积累经验，希望以后可以更加完美地归纳技术。  </p>
+<p>##另外</p>
+<p>这次毕设使用的是校园邮件服务器，该服务器由网易企业版邮件服务器提供，授权码的申请和163邮箱申请方式差不多，需要留意的是host地址的填写，由于是学校的邮件服务器，其smtp的地址与网易的smtp地址不同，可以在<a href="https://qiye.163.com/help/client-profile.html" target="_blank" rel="noopener">网易企业邮箱帮助中心</a>根据域名查询对应的服务器地址</p>
 
       
 
@@ -216,6 +261,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot mail</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -266,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/26/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/26/springboot%E9%9B%86%E6%88%90%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%AD%A3%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,15 +336,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/26/springboot%E9%9B%86%E6%88%90%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%AD%A3%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          springboot集成邮件服务-我的第一篇正式博客文章
-        
-      </div>
-    </a>
   
+    <a href="/2020/02/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
