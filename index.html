@@ -190,8 +190,8 @@
 <p>MIME的英文全称是”Multipurpose Internet Mail Extensions” 多功能Internet 邮件扩充服务，它是一种多用途网际邮件扩充协议，在1992年最早应用于电子邮件系统，但后来也应用到浏览器。MIME意为多目Internet邮件扩展，它设计的最初目的是为了在发送电子邮件时附加多媒体数据，让邮件客户程序能根据其类型进行处理。然而当它被HTTP协议支持之后，它的意义就更为显著了。它使得HTTP传输的不仅是普通的文本，而变得丰富多彩。</p>
 </blockquote>
 <h2 id="获取客户端授权码"><a href="#获取客户端授权码" class="headerlink" title="获取客户端授权码"></a>获取客户端授权码</h2><p>在使用api之前，需要获取邮箱对应的客户端授权码，不同的邮件服务器申请授权码的方式大相径庭，这里例举两种常见。</p>
-<h3 id="163邮箱"><a href="#163邮箱" class="headerlink" title="163邮箱"></a>163邮箱</h3><p><img src="/.com//mail-163.png" alt="mail-163"></p>
-<h3 id="QQ邮箱"><a href="#QQ邮箱" class="headerlink" title="QQ邮箱"></a>QQ邮箱</h3><p><img src="/.com//mail-qq.png" alt="mail-qq"></p>
+<h3 id="163邮箱"><a href="#163邮箱" class="headerlink" title="163邮箱"></a>163邮箱</h3><p><img src="/2020/02/26/springboot%E9%9B%86%E6%88%90%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%AD%A3%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/mail-163.png" alt="mail-163"></p>
+<h3 id="QQ邮箱"><a href="#QQ邮箱" class="headerlink" title="QQ邮箱"></a>QQ邮箱</h3><p><img src="/2020/02/26/springboot%E9%9B%86%E6%88%90%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%AD%A3%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/mail-qq.png" alt="mail-qq"></p>
 <hr>
 <h1 id="搭建步骤以及简单使用"><a href="#搭建步骤以及简单使用" class="headerlink" title="搭建步骤以及简单使用"></a>搭建步骤以及简单使用</h1><p>既然是springboot集成邮件服务，那么第一件事自然是配置maven添加mail依赖</p>
 <h2 id="pom-xml文件"><a href="#pom-xml文件" class="headerlink" title="pom.xml文件"></a>pom.xml文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- email依赖 --&gt; </span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;spring-boot-starter-mail&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
